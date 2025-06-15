@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Employee</title>
+</head>
+<body>
+<h2>Add New Employee</h2>
+<form th:action="@{/employees/v1/add}" method="post" th:object="${employee}">
+    Name: <input type="text" th:field="*{name}" /><br>
+    Department: <input type="text" th:field="*{department}" /><br>
+    Salary: <input type="number" step="0.01" th:field="*{salary}" /><br>
+    Date of Joining: <input type="date" th:field="*{dateOfJoining}" /><br>
+    <button type="submit">Add</button>
+</form>
+</body>
+</html>
