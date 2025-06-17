@@ -5,17 +5,26 @@
 </head>
 <body>
 <h1>All Employees</h1>
+<a href="/employees/v1/add">Add New Employee</a>
 <table border="1">
-    <tr>
-        <th>ID</th><th>Name</th><th>Department</th><th>Salary</th><th>Date of Joining</th>
-    </tr>
-    <tr th:each="emp : ${employees}">
-        <td th:text="${emp.id}"></td>
-        <td th:text="${emp.name}"></td>
-        <td th:text="${emp.department}"></td>
-        <td th:text="${emp.salary}"></td>
-        <td th:text="${emp.dateOfJoining}"></td>
-    </tr>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Date of Joining</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="emp : ${employees}">
+            <td th:text="${emp.id}"></td>
+            <td th:text="${emp.name}"></td>
+            <td th:text="${emp.department}"></td>
+            <td th:text="${emp.salary}"></td>
+            <td th:text="${emp.dateOfJoining}"></td>
+        </tr>
+    </tbody>
 </table>
 </body>
 </html>
